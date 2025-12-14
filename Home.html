@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serenity Spa | Relax • Refresh • Rejuvenate</title>
+    <meta name="description" content="Professional massage and spa services. Book Swedish, Deep Tissue, Aroma Therapy, and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Script.js">
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Main Website -->
+    <div id="main-website">
+        <!-- Header -->
+        <header>
+            <div class="container header-container">
+                <a href="#home" class="logo">Serenity<span>Spa</span></a>
+                <button class="mobile-menu-btn" id="mobile-menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#booking" class="nav-link">Booking</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="#admin-login" class="nav-link" id="admin-link">Admin</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>Relax • Refresh • Rejuvenate</h1>
+                <p>Experience ultimate relaxation with our professional massage therapies in a tranquil environment designed to restore balance to your body and mind.</p>
+                <div class="cta-buttons">
+                    <a href="#booking" class="btn btn-primary">Book Now</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Us</h2>
+                    <p>Discover the story behind Serenity Spa and our commitment to your wellness journey.</p>
+                </div>
+                <div class="about-content">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center;">
+                        <div>
+                            <h3 style="font-size: 2rem; margin-bottom: 20px; color: var(--primary);">Our Mission</h3>
+                            <p style="margin-bottom: 20px;">At Serenity Spa, we believe in the power of touch to heal, restore, and rejuvenate. Our mission is to provide a sanctuary where you can escape the stresses of daily life and embark on a journey to holistic wellness.</p>
+                            <p style="margin-bottom: 20px;">Founded in 2010, our spa has been a haven for thousands of clients seeking relief from physical tension, mental stress, and emotional fatigue.</p>
+                            <p>Our team of certified therapists brings years of experience and a passion for helping others achieve balance and harmony in their lives.</p>
+                        </div>
+                        <div style="background-color: var(--secondary); padding: 40px; border-radius: var(--radius);">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: var(--primary-dark);">Why Choose Us</h3>
+                            <ul style="list-style-type: none;">
+                                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                                    <i class="fas fa-check" style="color: var(--primary); position: absolute; left: 0;"></i>
+                                    <strong>Certified Therapists:</strong> All our therapists are certified with 5+ years of experience
+                                </li>
+                                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                                    <i class="fas fa-check" style="color: var(--primary); position: absolute; left: 0;"></i>
+                                    <strong>Premium Products:</strong> We use only organic, high-quality oils and products
+                                </li>
+                                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                                    <i class="fas fa-check" style="color: var(--primary); position: absolute; left: 0;"></i>
+                                    <strong>Customized Treatments:</strong> Every session is tailored to your specific needs
+                                </li>
+                                <li style="margin-bottom: 15px; padding-left: 30px; position: relative;">
+                                    <i class="fas fa-check" style="color: var(--primary); position: absolute; left: 0;"></i>
+                                    <strong>Luxury Environment:</strong> Our facilities are designed for maximum comfort and relaxation
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>Choose from our wide range of professional massage and spa treatments.</p>
+                </div>
+                <div class="services-grid" id="services-container">
+                    <!-- Services will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section id="booking">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Book an Appointment</h2>
+                    <p>Fill out the form below to schedule your massage session.</p>
+                </div>
+                <div class="booking-form">
+                    <div id="booking-message"></div>
+                    <form id="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="service">Select Service *</label>
+                                <select id="service" class="form-control" required>
+                                    <option value="">Choose a service</option>
+                                    <!-- Services will be populated by JS -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Preferred Date *</label>
+                                <input type="date" id="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Preferred Time *</label>
+                                <select id="time" class="form-control" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">09:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="14:00">02:00 PM</option>
+                                    <option value="15:00">03:00 PM</option>
+                                    <option value="16:00">04:00 PM</option>
+                                    <option value="17:00">05:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Additional Notes (Optional)</label>
+                            <textarea id="message" class="form-control" rows="4" placeholder="Any specific requirements or health concerns we should know about?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" style="background-color: #f9f9f9;">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Gallery</h2>
+                    <p>Take a look at our tranquil spa environment and facilities.</p>
+                </div>
+                <div class="gallery-grid" id="gallery-container">
+                    <!-- Gallery items will be loaded by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Client Testimonials</h2>
+                    <p>See what our clients have to say about their experiences.</p>
+                </div>
+                <div class="testimonials-container">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"The best massage experience I've ever had! The therapists are incredibly skilled and the ambiance is so peaceful. I left feeling like a new person."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" class="author-img">
+                            <div>
+                                <h4>Sarah Johnson</h4>
+                                <p>Regular Client</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Us</h2>
+                    <p>Get in touch with us for any inquiries or special requests.</p>
+                </div>
+                <div class="contact-container">
+                    <div>
+                        <div class="contact-form">
+                            <div id="contact-message"></div>
+                            <form id="contact-form">
+                                <div class="form-group">
+                                    <label for="contact-name">Full Name *</label>
+                                    <input type="text" id="contact-name" class="form-control" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="contact-email">Email Address *</label>
+                                        <input type="email" id="contact-email" class="form-control" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contact-phone">Phone Number</label>
+                                        <input type="tel" id="contact-phone" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message-text">Message *</label>
+                                    <textarea id="contact-message-text" class="form-control" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="contact-info" style="margin-bottom: 30px;">
+                            <h3 style="margin-bottom: 20px; color: var(--primary);">Visit Our Spa</h3>
+                            <p style="margin-bottom: 15px;"><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Serenity City, SC 12345</p>
+                            <p style="margin-bottom: 15px;"><i class="fas fa-phone"></i> (123) 456-7890</p>
+                            <p style="margin-bottom: 15px;"><i class="fas fa-envelope"></i> info@serenityspa.com</p>
+                            <p style="margin-bottom: 15px;"><i class="fas fa-clock"></i> Mon-Fri: 9am-7pm | Sat-Sun: 10am-5pm</p>
+                        </div>
+                        <div class="map-container">
+                            <!-- Google Maps Embed -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.177858804427!2d-73.98784468459418!3d40.70555197933205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a315cdf4c9b%3A0x8b934de5cae6f7a!2sSpa%20Retreat!5e0!3m2!1sen!2sus!4v1623256789012!5m2!1sen!2sus" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="footer-container">
+                    <div>
+                        <a href="#" class="footer-logo">Serenity<span>Spa</span></a>
+                        <p style="color: #bbb; margin-bottom: 20px;">Your sanctuary for relaxation and rejuvenation. Experience the perfect balance of body, mind, and spirit.</p>
+                        <div style="display: flex; gap: 15px;">
+                            <a href="#" style="color: white; background-color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: var(--transition);"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" style="color: white; background-color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: var(--transition);"><i class="fab fa-instagram"></i></a>
+                            <a href="#" style="color: white; background-color: var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; transition: var(--transition);"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#booking">Booking</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contact Info</h4>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Wellness Street, Serenity City</p>
+                        <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                        <p><i class="fas fa-envelope"></i> info@serenityspa.com</p>
+                        <p><i class="fas fa-clock"></i> Mon-Sun: 9am-7pm</p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Serenity Spa. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--primary);"></i> for wellness</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Admin Login -->
+    <div id="admin-login" class="hidden">
+        <div class="admin-login">
+            <h2 class="text-center" style="margin-bottom: 30px; color: var(--primary);">Admin Login</h2>
+            <div id="login-message"></div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="admin-email">Admin Email</label>
+                    <input type="email" id="admin-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Login</button>
+                <p class="text-center mt-20" style="color: var(--gray); font-size: 0.9rem;">Note: Only authorized admin can access the dashboard.</p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div id="admin-panel" class="hidden">
+        <div class="admin-header">
+            <div class="container admin-nav">
+                <div class="admin-title">Serenity Spa Admin Dashboard</div>
+                <button id="logout-btn" class="btn logout-btn">Logout</button>
+            </div>
+        </div>
+        <div class="admin-container">
+            <div class="container admin-content">
+                <div class="admin-section">
+                    <h3>Recent Bookings</h3>
+                    <div id="bookings-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Customer</th>
+                                    <th>Service</th>
+                                    <th>Date & Time</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="bookings-table-body">
+                                <!-- Bookings will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Contact Messages</h3>
+                    <div id="messages-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="messages-table-body">
+                                <!-- Messages will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="admin-section">
+                    <h3>Service Management</h3>
+                    <div id="services-table-container">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Service Name</th>
+                                    <th>Duration</th>
+                                    <th>Price</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="services-table-body">
+                                <!-- Services will be populated by JavaScript -->
+                            </tbody>
+                        </table>
+                    </div>
+                    <button id="add-service-btn" class="btn btn-primary mt-20">Add New Service</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <img src="" alt="" class="lightbox-img" id="lightbox-img">
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>
